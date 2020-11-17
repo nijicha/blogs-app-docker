@@ -9,7 +9,7 @@ RSpec.describe 'Hello', type: :request do
 
     it 'returns hello world!' do
       get '/'
-      expect(response.body).to eq('hello')
+      expect(response.body).to eq('hello world!')
     end
   end
 end
