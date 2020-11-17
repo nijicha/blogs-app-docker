@@ -39,10 +39,10 @@ RUN apt-get update \
 # parse rails app to /myapp
 RUN mkdir /myapp
 WORKDIR /myapp
-COPY ./src/Gemfile /myapp/Gemfile
-COPY ./src/Gemfile.lock /myapp/Gemfile.lock
+COPY Gemfile /myapp/Gemfile
+COPY Gemfile.lock /myapp/Gemfile.lock
 RUN bundle install
-COPY ./src /myapp
+COPY . /myapp
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
