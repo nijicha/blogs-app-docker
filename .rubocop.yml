@@ -1,0 +1,22 @@
+require:
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.7.2
+
+  Exclude:
+    - 'bin/**'
+    - 'db/migrate/**'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Skip application service extend class purpose
+# with this lint
+Lint/MissingSuper:
+  Exclude:
+    - 'app/services/**/*'
